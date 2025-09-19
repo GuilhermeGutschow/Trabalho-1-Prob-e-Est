@@ -1,4 +1,4 @@
-#Importação dos dados:
+# ---- Importação dos dados: ----
 
 X202309_soft_eng_jobs_pol <- read.csv("202309_soft_eng_jobs_pol.csv", fileEncoding = "Latin1")
 X202310_soft_eng_jobs_pol <- read.csv("202310_soft_eng_jobs_pol.csv", fileEncoding = "Latin1")
@@ -32,7 +32,7 @@ dados = rbind(X202309_soft_eng_jobs_pol, X202310_soft_eng_jobs_pol,
               X202407_soft_eng_jobs_pol)
 write.csv2(dados,"dados_final.csv",row.names=FALSE)
 
-#Piechart tecnlogias:
+#----Piechart tecnlogias: ----
 # Preparação dos dados
 library(dplyr)
 library(plotly)
@@ -71,12 +71,7 @@ fig <- plot_ly(
 
 fig
 
-
-
-
-
-
-#Gráfico de barras de salmin e max porlibrary(dplyr)
+#----Gráfico de barras de salmin e max ----
 library(ggplot2)
 library(scales)
 
@@ -114,3 +109,6 @@ ggplot(resumo_salario, aes(x = technology)) +
     axis.text.x = element_text(angle = 45, hjust = 1)
   )
 
+
+
+#----   ----
